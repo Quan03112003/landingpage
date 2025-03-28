@@ -595,7 +595,7 @@ ul {
     color: #216d00;
     transition: 0.5s;
 }
-/*end footer*/
+
 @media (min-width: 992px) {
     .header .click {
         display: none;
