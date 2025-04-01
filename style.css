@@ -595,7 +595,81 @@ ul {
     color: #216d00;
     transition: 0.5s;
 }
+#chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: none;
+    margin-right: 48px;
+}
 
+#chat-header {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#chat-body {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#chat-input {
+    display: flex;
+    padding: 10px;
+}
+
+#chat-input input {
+    flex: 1;
+    padding: 5px;
+}
+
+#chat-input button {
+    padding: 5px 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#chat-toggle :before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: rgb(85, 85, 139);
+    border-radius: 50%;
+    position: absolute;
+    animation: loading-3 1s infinite;
+}
+@keyframes loading-3 {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0.3;
+    }
+}
 @media (min-width: 992px) {
     .header .click {
         display: none;
@@ -753,5 +827,9 @@ ul {
     }
     .discover .headline {
         font-size: 30px;
+    }
+    #chat-container,
+    #chat-toggle {
+        display: none;
     }
 }
